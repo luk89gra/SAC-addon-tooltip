@@ -1,0 +1,56 @@
+{
+  "id": "com.luk89gra.tooltip.miniChart",
+  "version": "1.0.0",
+  "name": "Tooltip Mini-Chart Add-On",
+  "description": "Adds a tiny chart inside the built-in tooltip",
+  "vendor": "luk89gra",
+  "license": "MIT",
+  "extensions": [
+    {
+      "extensionPoint": "sap.addOn.viz.tooltip",
+      "webcomponents": [
+        {
+          "kind": "main",
+          "tag": "mini-tooltip",
+          "url": "https://luk89gra.github.io/SAC-addon-tooltip/mini-tooltip.js",
+          "integrity": "",
+          "ignoreIntegrity": true
+        },
+        {
+          "kind": "builder",
+          "tag": "mini-tooltip-builder",
+          "url": "https://luk89gra.github.io/SAC-addon-tooltip/mini-tooltip-builder.js",
+          "integrity": "",
+          "ignoreIntegrity": true
+        }
+      ],
+      "properties": {
+        "chartType": {
+          "type": "string",
+          "description": "bar|line",
+          "default": "bar"
+        },
+        "dimension": {
+          "type": "string",
+          "description": "Dimension technical name",
+          "default": ""
+        },
+        "measure": {
+          "type": "string",
+          "description": "Measure technical name",
+          "default": ""
+        },
+        "maxPoints": {
+          "type": "number",
+          "description": "Max points in mini chart",
+          "default": 10
+        },
+        "accentColor": {
+          "type": "string",
+          "description": "Bar/line color",
+          "default": "#3f8efc"
+        }
+      }
+    }
+  ]
+}
